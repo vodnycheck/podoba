@@ -11,7 +11,7 @@
  * @since 1.0
  * @version 1.0
  */
-
+$imageDir = '/wp-content/themes/podoba/assets/images/';
 get_header(); ?>
 
 <div id="primary" class="content-area">
@@ -111,19 +111,19 @@ get_header(); ?>
 
 						<div class="row justify-content-between align-items-baseline">
 							<div class="col-md-12 col-lg-6 set row justify-content-center">
-								<div style="background-image: url(<?php echo get_field('picture_1'); ?>);" class="work-examples work-examples-big col-12" id="bigYellow"></div>
+								<div class="work-examples work-examples-big col-12" id="bigYellow" style="background-image: url(<?php echo get_field('image_1'); ?>);"></div>
 								<div class="work-examples-text col-11"><p><strong><?php echo get_field('header_1'); ?></strong><?php echo get_field('description_1'); ?></p></div>
 							</div>
-							<div style="background-image: url(<?php echo get_field('picture_2'); ?>" class="col-md-12 col-lg-6 set row justify-content-center">
-								<div class="work-examples col-12" id="smallYellow"></div>
+							<div class="col-md-12 col-lg-6 set row justify-content-center">
+								<div class="work-examples col-12" id="smallYellow" style="background-image: url(<?php echo get_field('image_2'); ?>);"></div>
 								<div class="work-examples-text col-11"><p><strong><?php echo get_field('header_2'); ?></strong><?php echo get_field('description_2'); ?></p></div>
 							</div>
-							<div style="background-image: url(<?php echo get_field('picture_3'); ?>" class="col-md-12 col-lg-6 set row justify-content-center">
-								<div class="work-examples col-12" id="smallColor"></div>
+							<div class="col-md-12 col-lg-6 set row justify-content-center">
+								<div class="work-examples col-12" id="smallColor" style="background-image: url(<?php echo get_field('image_3'); ?>);"></div>
 								<div class="work-examples-text col-11"><p><strong><?php echo get_field('header_3'); ?></strong><?php echo get_field('description_3'); ?></p></div>
 							</div>
-							<div style="background-image: url(<?php echo get_field('picture_4'); ?>" class="col-md-12 col-lg-6 set row justify-content-center">
-								<div class="work-examples work-examples-big col-12" id="bigColor"></div>
+							<div class="col-md-12 col-lg-6 set row justify-content-center">
+								<div class="work-examples work-examples-big col-12" id="bigColor" style="background-image: url(<?php echo get_field('image_4'); ?>);"></div>
 								<div class="work-examples-text col-11"><p><strong><?php echo get_field('header_4'); ?></strong><?php echo get_field('description_4'); ?></p></div>
 							</div>
 						</div>
@@ -141,61 +141,61 @@ get_header(); ?>
 							<a name="-1" class="slide-change"></a>
 						</div>
 						<div class="container my-slides fad col-10">
-							<a data-fancybox="gallery" href="images/big/810.jpg">
-	    						<img src="images/small/810.jpg">
+							<a data-fancybox="gallery" href="<?php echo $imageDir;?>big/810.jpg">
+	    						<img src="<?php echo $imageDir;?>small/810.jpg">
 							</a>
-							<a data-fancybox="gallery" href="images/big/798.jpg">
-	    						<img src="images/small/798.jpg">
+							<a data-fancybox="gallery" href="<?php echo $imageDir;?>big/798.jpg">
+	    						<img src="<?php echo $imageDir;?>small/798.jpg">
 							</a>
-							<a data-fancybox="gallery" href="images/big/829.jpg">
-	    						<img src="images/small/829.jpg">
+							<a data-fancybox="gallery" href="<?php echo $imageDir;?>big/829.jpg">
+	    						<img src="<?php echo $imageDir;?>small/829.jpg">
 							</a>
-							<a data-fancybox="gallery"  href="images/big/856.jpg">
-	    						<img src="images/small/856.jpg">
+							<a data-fancybox="gallery"  href="<?php echo $imageDir;?>big/856.jpg">
+	    						<img src="<?php echo $imageDir;?>small/856.jpg">
 							</a>
-							<a data-fancybox="gallery" href="images/big/789.jpg">
-	    						<img src="images/small/789.jpg">
+							<a data-fancybox="gallery" href="<?php echo $imageDir;?>big/789.jpg">
+	    						<img src="<?php echo $imageDir;?>small/789.jpg">
 							</a>
-							<a data-fancybox="gallery" href="images/big/771.jpg">
-	    						<img src="images/small/771.jpg">
+							<a data-fancybox="gallery" href="<?php echo $imageDir;?>big/771.jpg">
+	    						<img src="<?php echo $imageDir;?>small/771.jpg">
 							</a>
-							<a data-fancybox="gallery" href="images/big/282.jpg">
-	    						<img src="images/small/282.jpg">
+							<a data-fancybox="gallery" href="<?php echo $imageDir;?>big/282.jpg">
+	    						<img src="<?php echo $imageDir;?>small/282.jpg">
 							</a>
-							<a data-fancybox="gallery" href="images/big/910.jpg">
-	    						<img src="images/small/910.jpg">
+							<a data-fancybox="gallery" href="<?php echo $imageDir;?>big/910.jpg">
+	    						<img src="<?php echo $imageDir;?>small/910.jpg">
 							</a>
-							<a  data-fancybox="gallery" href="images/big/290.jpg">
-	    						<img src="images/small/290.jpg">
+							<a  data-fancybox="gallery" href="<?php echo $imageDir;?>big/290.jpg">
+	    						<img src="<?php echo $imageDir;?>small/290.jpg">
 							</a>
 								
 							<!--  -->
-							<a data-fancybox="gallery" href="images/big/856.jpg">
-	    						<img src="images/small/856.jpg">
+							<a data-fancybox="gallery" href="<?php echo $imageDir;?>big/856.jpg">
+	    						<img src="<?php echo $imageDir;?>small/856.jpg">
 							</a>
-							<a data-fancybox="gallery" href="images/big/789.jpg">
-	    						<img src="images/small/789.jpg">
+							<a data-fancybox="gallery" href="<?php echo $imageDir;?>big/789.jpg">
+	    						<img src="<?php echo $imageDir;?>small/789.jpg">
 							</a>
-							<a data-fancybox="gallery" href="images/big/771.jpg">
-	    						<img src="images/small/771.jpg">
+							<a data-fancybox="gallery" href="<?php echo $imageDir;?>big/771.jpg">
+	    						<img src="<?php echo $imageDir;?>small/771.jpg">
 							</a>
-							<a data-fancybox="gallery" href="images/big/282.jpg">
-	    						<img src="images/small/282.jpg">
+							<a data-fancybox="gallery" href="<?php echo $imageDir;?>big/282.jpg">
+	    						<img src="<?php echo $imageDir;?>small/282.jpg">
 							</a>
-							<a data-fancybox="gallery" href="images/big/910.jpg">
-	    						<img src="images/small/910.jpg">
+							<a data-fancybox="gallery" href="<?php echo $imageDir;?>big/910.jpg">
+	    						<img src="<?php echo $imageDir;?>small/910.jpg">
 							</a>
-							<a data-fancybox="gallery" href="images/big/290.jpg">
-	    						<img src="images/small/290.jpg">
+							<a data-fancybox="gallery" href="<?php echo $imageDir;?>big/290.jpg">
+	    						<img src="<?php echo $imageDir;?>small/290.jpg">
 							</a>
-							<a data-fancybox="gallery" href="images/big/810.jpg">
-	    						<img src="images/small/810.jpg">
+							<a data-fancybox="gallery" href="<?php echo $imageDir;?>big/810.jpg">
+	    						<img src="<?php echo $imageDir;?>small/810.jpg">
 							</a>
-							<a data-fancybox="gallery" href="images/big/789.jpg">
-	    						<img src="images/small/789.jpg">
+							<a data-fancybox="gallery" href="<?php echo $imageDir;?>big/789.jpg">
+	    						<img src="<?php echo $imageDir;?>small/789.jpg">
 							</a>
-							<a data-fancybox="gallery" href="images/big/829.jpg">
-	    						<img src="images/small/829.jpg">
+							<a data-fancybox="gallery" href="<?php echo $imageDir;?>big/829.jpg">
+	    						<img src="<?php echo $imageDir;?>small/829.jpg">
 							</a>
 							<!--  -->
 						</div>
@@ -235,16 +235,16 @@ get_header(); ?>
 								</div>
 							<div class="social-networks row justify-content-around">
 								<div id="facebook">
-									<a href=""><img src="images/socialNetworks/if_facebook_395306.png" alt=""></a>
+									<a href=""><img src="<?php echo $imageDir;?>socialNetworks/if_facebook_395306.png" alt=""></a>
 								</div>
 								<div id="pinterest">
-									<a href=""><img src="images/socialNetworks/if_pinterest_395377.png" alt=""></a>
+									<a href=""><img src="<?php echo $imageDir;?>socialNetworks/if_pinterest_395377.png" alt=""></a>
 								</div>
 								<div id="instagram">
-									<a href=""><img src="images/socialNetworks/if_instagram_395340.png" alt=""></a>
+									<a href=""><img src="<?php echo $imageDir;?>socialNetworks/if_instagram_395340.png" alt=""></a>
 								</div>
 								<div id="vk">
-									<a href=""><img src="images/socialNetworks/if_vkontakte_vk_395425.png" alt=""></a>
+									<a href=""><img src="<?php echo $imageDir;?>socialNetworks/if_vkontakte_vk_395425.png" alt=""></a>
 								</div>
 							</div>
 						</div>

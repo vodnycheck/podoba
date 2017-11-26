@@ -18,15 +18,16 @@
 /*-----------------------------------------------------------------------------*/
 /*-----------------------    PATHS END OPTIONS     ----------------------------*/
 /*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
-		var paths = {
-			themeFolder: '/wp-content/themes/podoba/',
+		var paths = {};
+		paths = {
+			themeFolder: './wp-content/themes/podoba/',
 			src: {
-				css: [paths.themeFolder + 'src/css/**'],/*TODO path to sass*/
-				js: paths.themeFolder + 'src/js/**/*.js',/*TODO path to js*/
+				css: './wp-content/themes/podoba/src/css/**',/*TODO path to sass*/
+				js: './wp-content/themes/podoba/src/js/**/*.js',/*TODO path to js*/
 			},
 			build: {
-				css: paths.themeFolder,
-				js: paths.themeFolder + 'assets/js/',
+				css: './wp-content/themes/podoba/',
+				js: './wp-content/themes/podoba/assets/js/',
 			},
 			sassLint: ['./src/css/**/*.scss', '!./src/css/vendors/**', '!./src/css/base/**'],/*TODO path to lint. ! to exclude file*/
 			esLint: ['./src/js/**', '!./src/js/vendors/**'],/*TODO path to lint. ! to exclude file*/
@@ -63,7 +64,7 @@
 /*-----------------------        CSS PART          ----------------------------*/
 /*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
 	function cleanCSSTask(){
-			return del([paths.themeFolder + 'style.css']);
+			return del(['./wp-content/themes/podoba/style.css']);
 	}
 
 	function cssTask(){
@@ -139,7 +140,7 @@
 /*-----------------------------------------------------------------------------*/
 
 	function defaultTask(){
-		gulp.watch(paths.src.css, ['css', 'cssCr', 'sasslint']);
+		gulp.watch(paths.src.css, ['css', 'sasslint']);
 		gulp.watch(paths.src.js, ['js', 'eslint']);
 	}
 
