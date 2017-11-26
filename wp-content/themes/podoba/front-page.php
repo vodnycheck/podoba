@@ -112,19 +112,19 @@ get_header(); ?>
 						<div class="row justify-content-between align-items-baseline">
 							<div class="col-md-12 col-lg-6 set row justify-content-center">
 								<div class="work-examples work-examples-big col-12" id="bigYellow" style="background-image: url(<?php echo get_field('image_1'); ?>);"></div>
-								<div class="work-examples-text col-11"><p><strong><?php echo get_field('header_1'); ?></strong><?php echo get_field('description_1'); ?></p></div>
+								<div class="work-examples-text col-11"><p><strong><?php echo get_field('header_1'); ?> </strong><?php echo get_field('description_1'); ?></p></div>
 							</div>
 							<div class="col-md-12 col-lg-6 set row justify-content-center">
 								<div class="work-examples col-12" id="smallYellow" style="background-image: url(<?php echo get_field('image_2'); ?>);"></div>
-								<div class="work-examples-text col-11"><p><strong><?php echo get_field('header_2'); ?></strong><?php echo get_field('description_2'); ?></p></div>
+								<div class="work-examples-text col-11"><p><strong><?php echo get_field('header_2'); ?> </strong><?php echo get_field('description_2'); ?></p></div>
 							</div>
 							<div class="col-md-12 col-lg-6 set row justify-content-center">
 								<div class="work-examples col-12" id="smallColor" style="background-image: url(<?php echo get_field('image_3'); ?>);"></div>
-								<div class="work-examples-text col-11"><p><strong><?php echo get_field('header_3'); ?></strong><?php echo get_field('description_3'); ?></p></div>
+								<div class="work-examples-text col-11"><p><strong><?php echo get_field('header_3'); ?> </strong><?php echo get_field('description_3'); ?></p></div>
 							</div>
 							<div class="col-md-12 col-lg-6 set row justify-content-center">
 								<div class="work-examples work-examples-big col-12" id="bigColor" style="background-image: url(<?php echo get_field('image_4'); ?>);"></div>
-								<div class="work-examples-text col-11"><p><strong><?php echo get_field('header_4'); ?></strong><?php echo get_field('description_4'); ?></p></div>
+								<div class="work-examples-text col-11"><p><strong><?php echo get_field('header_4'); ?> </strong><?php echo get_field('description_4'); ?></p></div>
 							</div>
 						</div>
 					
@@ -152,15 +152,15 @@ get_header(); ?>
 										$title = $image['title']; //The title
 										$caption= $image['caption']; //The caption
 										$full_image_url= $image['full_image_url']; //Full size image url
-										$full_image_url = acf_photo_gallery_resize_image($full_image_url, 262, 160); //Resized size to 262px width by 160px height image url
-										$thumbnail_image_url= $image['thumbnail_image_url']; //Get the thumbnail size image url 150px by 150px
+										//$full_image_url = acf_photo_gallery_resize_image($full_image_url, 262, 160); //Resized size to 262px width by 160px height image url
+										$thumbnail_image_url= acf_photo_gallery_resize_image($full_image_url, 300, 280);
 										$url= $image['url']; //Goto any link when clicked
 										$target= $image['target']; //Open normal or new tab
 										$alt = get_field('photo_gallery_alt', $id); //Get the alt which is a extra field (See below how to add extra fields)
 										$class = get_field('photo_gallery_class', $id); //Get the class which is a extra field (See below how to add extra fields)
 							?>
-							<a data-fancybox="gallery" <a href="<?php echo $url; ?>">
-								<img src="<?php echo $full_image_url; ?>" alt="<?php echo $title; ?>" title="<?php echo $title; ?>">
+							<a data-fancybox="gallery" href="<?php echo $full_image_url; ?>">
+								<img src="<?php echo $thumbnail_image_url; ?>" alt="<?php echo $title; ?>" title="<?php echo $title; ?>">
 							</a>
 						<?php endforeach; endif; ?>
 						</div>
@@ -177,16 +177,7 @@ get_header(); ?>
 						<div class="contacts-col contact-us col-sm-12 col-md-10 col-lg-7 col-xl-6">
 							<h3 id="sector4">СВЯЗАТЬСЯ С НАМИ</h3>
 							<div class="text-left">
-								<div class="user-information user-info">
-									<input type="text" placeholder="ВАШЕ ИМЯ">
-									<input type="text" placeholder="ВАШ ЭЛЕКТРОННЫЙ АДРЕС">
-								</div>
-								<div class="user-message user-info">
-									<textarea name="" id="" placeholder="СООБЩЕНИЕ"></textarea>
-								</div>
-								<div class="user-send user-info">
-									<input type="button" class="button" value="ОТПРАВИТЬ">
-								</div>
+								<?php echo do_shortcode( '[contact-form-7 id="71" title="Contact"]' ); ?>
 							</div>
 						</div>
 						<div class="contacts-col our-contacts col-xs-7 col-sm-7 col-md-7 col-lg-4 col-xl-4">

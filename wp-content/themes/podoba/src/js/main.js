@@ -1,8 +1,5 @@
 'use strict';
 
-// podoba js
-
-
 var slideIndex = 0;
 
 
@@ -152,10 +149,3 @@ function counter(i){
 })(window.jQuery);
 
 $('[data-sidenav]').sidenav();
-
-
-
-
-
-
-
