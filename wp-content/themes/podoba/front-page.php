@@ -94,7 +94,7 @@ get_header(); ?>
 			<section class="info-bg our-info" id="ourInfo">
 				<div class="container container-info">
 					<div class="row justify-content-center">
-						<div class="info col-sm-12 col-md-12 col-lg-12 col-xl-10" id="section1">
+						<div class="info col-12" id="section1">
 							<?php echo get_field('description'); ?>
 						</div>
 					</div>
@@ -105,7 +105,7 @@ get_header(); ?>
 				<div class="sets container text-center">
 					<h2 id="sector2">НАШИ РАБОТЫ</h2>
 					<div class="row justify-content-center">
-					<div class="col-lg-12 col-xl-10">
+					<div class="col-12">
 
 
 						<div class="row justify-content-between align-items-baseline">
@@ -135,36 +135,43 @@ get_header(); ?>
 			<section class="slide-gallery" id="slideGallery">
 				<div class="gallery-section container">
 					<h2 id="sector3">ГАЛЕРЕЯ</h2>
-					<div class="row d-flex justify-content-center align-items-center">
-						<div class="slider-buttons col-1 slideGallery">
-							<a name="-1" class="slide-change"></a>
-						</div>
-						<div class="container my-slides fad col-10">
-							<?php
-								//Get the images ids from the post_metadata
-								$images = acf_photo_gallery('gallery', $post->ID);
-								//Check if return array has anything in it
-								if( count($images) ):
-									//Cool, we got some data so now let's loop over it
-									foreach($images as $image):
-										$id = $image['id']; // The attachment id of the media
-										$title = $image['title']; //The title
-										$caption= $image['caption']; //The caption
-										$full_image_url= $image['full_image_url']; //Full size image url
-										//$full_image_url = acf_photo_gallery_resize_image($full_image_url, 262, 160); //Resized size to 262px width by 160px height image url
-										$thumbnail_image_url= acf_photo_gallery_resize_image($full_image_url, 300, 280);
-										$url= $image['url']; //Goto any link when clicked
-										$target= $image['target']; //Open normal or new tab
-										$alt = get_field('photo_gallery_alt', $id); //Get the alt which is a extra field (See below how to add extra fields)
-										$class = get_field('photo_gallery_class', $id); //Get the class which is a extra field (See below how to add extra fields)
-							?>
-							<a data-fancybox="gallery" href="<?php echo $full_image_url; ?>">
-								<img src="<?php echo $thumbnail_image_url; ?>" alt="<?php echo $title; ?>" title="<?php echo $title; ?>">
-							</a>
-						<?php endforeach; endif; ?>
-						</div>
-						<div class="slider-buttons col-1 slideGallery">
-							<a name="1" class="slide-change"></a>
+					<div style="position: relative;     height: 660px;">
+						<!-- Slider main container -->
+						<div class="swiper-container">
+							<!-- Additional required wrapper -->
+							<div class="swiper-wrapper">
+								<!-- Slides -->
+								<?php
+									//Get the images ids from the post_metadata
+									$images = acf_photo_gallery('gallery', $post->ID);
+									//Check if return array has anything in it
+									if( count($images) ):
+										//Cool, we got some data so now let's loop over it
+										foreach($images as $image):
+											$id = $image['id']; // The attachment id of the media
+											$title = $image['title']; //The title
+											$caption= $image['caption']; //The caption
+											$full_image_url= $image['full_image_url']; //Full size image url
+											//$full_image_url = acf_photo_gallery_resize_image($full_image_url, 262, 160); //Resized size to 262px width by 160px height image url
+											$thumbnail_image_url= acf_photo_gallery_resize_image($full_image_url, 290, 200);
+											$url= $image['url']; //Goto any link when clicked
+											$target= $image['target']; //Open normal or new tab
+											$alt = get_field('photo_gallery_alt', $id); //Get the alt which is a extra field (See below how to add extra fields)
+											$class = get_field('photo_gallery_class', $id); //Get the class which is a extra field (See below how to add extra fields)
+								?>
+								<a class="swiper-slide" data-fancybox="gallery" href="<?php echo $full_image_url; ?>">
+									<span class="swiper-slide-img-wrap">
+										<img src="<?php echo $thumbnail_image_url; ?>" alt="<?php echo $title; ?>" title="<?php echo $title; ?>">
+									</span>
+								</a>
+								<?php endforeach; endif; ?>
+							</div>
+							<!-- If we need navigation buttons -->
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+						 
+							<!-- If we need scrollbar -->
+							<div class="swiper-scrollbar"></div>
 						</div>
 					</div>
 				</div>
@@ -173,13 +180,13 @@ get_header(); ?>
 			<section class="contacts-info" id="contactsInfo">
 				<div class="container">
 					<div class="row justify-content-sm-center justify-content-md-center justify-content-lg-around justify-content-xl-around">
-						<div class="contacts-col contact-us col-sm-12 col-md-10 col-lg-7 col-xl-6">
+						<div class="contacts-col contact-us col-12 col-lg-7">
 							<h3 id="sector4">СВЯЗАТЬСЯ С НАМИ</h3>
 							<div class="text-left">
 								<?php echo do_shortcode( '[contact-form-7 id="71" title="Contact"]' ); ?>
 							</div>
 						</div>
-						<div class="contacts-col our-contacts col-xs-7 col-sm-7 col-md-7 col-lg-4 col-xl-4">
+						<div class="contacts-col our-contacts col-12 col-lg-5">
 							<h3>КОНТАКТЫ</h3>
 								<div class="our-mail our-info">
 									<p>email: <a href="mailto:<?php echo get_field('email'); ?>"><?php echo get_field('email'); ?></a></p>

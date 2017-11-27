@@ -16,36 +16,18 @@ function counter(i){
 })();
 
  $(document).ready(function(){
+     var mySwiper = new Swiper ('.swiper-container', {
+         slidesPerView: 3,
+         slidesPerColumn: 3,
+         spaceBetween: 20,
+         //slidesPerGroup: 3,
 
-    $("#scroll-menu,#bottom-menu,#toggle-menu,#scroll").on("click","a", function (event) {
-        event.preventDefault();
-        var id  = $(this).attr('href'),
-            top = $(id).offset().top;
-        $('body,html').animate({scrollTop: top}, 1500);
-    });
-
-    $(".slideGallery").click(function(){
-        // console.log("wwww");
-        var slides = $(".my-slides");
-
-        var increment = this.children[0].name;
-        var slidesCount = counter(+increment);
-
-        for(var i=0; i<slides.children().length; i++){
-            slides.children("a:eq("+i+")").css("display","none")
-        }
-        var quantitySlides;
-        if ($(window).width() < "1027"){
-            quantitySlides = 8;
-        } else {
-            quantitySlides = 9;
-        }
-
-        for(var i=0; i<quantitySlides; i++){  
-            var index = (slidesCount+i) % slides.children().length;
-            slides.children("a:eq("+index+")").css("display","inline-block")
-        }
-    });
+         // Navigation arrows
+         navigation: {
+             nextEl: '.swiper-button-next',
+             prevEl: '.swiper-button-prev',
+         }
+     })
 });
 
 
