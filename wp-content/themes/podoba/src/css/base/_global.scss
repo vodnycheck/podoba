@@ -69,6 +69,32 @@ body{
 	background-position: bottom center;
 }
 
+.js-show-more {
+	position: relative;
+}
+
+.limit-text {
+	position: absolute;
+	width: 100%;
+	max-height: 100%;
+	overflow: hidden;
+	background-color: #eaeded;
+	z-index: 1;
+	transition: max-height .3s;
+}
+
+.js-read-more {
+	position: absolute;
+	bottom: -20px;
+	right: 0;
+	color: #000;
+	font-weight: 900;
+}
+
+.js-read-less {
+
+}
+
 .footer ul,
 .nav-menu ul{
 	display: flex;
@@ -154,6 +180,9 @@ body{
 	font-weight: 700;
 	line-height: 1.6;
 	color: #ffffff;
+}
+.set {
+	margin-bottom: 20px;
 }
 #ourWorks{
 	position: relative;

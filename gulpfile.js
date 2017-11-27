@@ -103,9 +103,9 @@
 					'vendors/**',
 				]))
 				.pipe(concat('global.js'))
-				.pipe(uglify().on('error', function(e){
-					console.log(e);
-				}))
+				//.pipe(uglify().on('error', function(e){
+				//	console.log(e);
+				//}))
 				.pipe(gulp.dest(paths.build.js));
 		}
 

@@ -104,29 +104,29 @@ get_header(); ?>
 			<section class="our-works" id="ourWorks">
 				<div class="sets container text-center">
 					<h2 id="sector2">НАШИ РАБОТЫ</h2>
-					<div class="row justify-content-center">
+					<div class="row">
 					<div class="col-12">
-
-
-						<div class="row justify-content-between align-items-baseline">
-							<div class="col-md-12 col-lg-6 set row justify-content-center">
+						<div class="row">
+							<div class="col-12 col-lg-6 set row">
 								<div class="work-examples work-examples-big col-12" id="bigYellow" style="background-image: url(<?php echo get_field('image_1'); ?>);"></div>
-								<div class="work-examples-text col-11"><p><strong><?php echo get_field('header_1'); ?> </strong><?php echo get_field('description_1'); ?></p></div>
+								<div class="work-examples-text col-11"><p class="js-show-more" data-max-height="60"><strong><?php echo get_field('header_1'); ?> </strong><?php echo get_field('description_1'); ?></p></div>
 							</div>
-							<div class="col-md-12 col-lg-6 set row justify-content-center">
+
+							<div class="col-12 col-lg-6 set row">
 								<div class="work-examples col-12" id="smallYellow" style="background-image: url(<?php echo get_field('image_2'); ?>);"></div>
-								<div class="work-examples-text col-11"><p><strong><?php echo get_field('header_2'); ?> </strong><?php echo get_field('description_2'); ?></p></div>
+								<div class="work-examples-text col-11"><p class="js-show-more" data-max-height="60"><strong><?php echo get_field('header_2'); ?> </strong><?php echo get_field('description_2'); ?></p></div>
 							</div>
-							<div class="col-md-12 col-lg-6 set row justify-content-center">
+
+							<div class="col-12 col-lg-6 set row">
 								<div class="work-examples col-12" id="smallColor" style="background-image: url(<?php echo get_field('image_3'); ?>);"></div>
-								<div class="work-examples-text col-11"><p><strong><?php echo get_field('header_3'); ?> </strong><?php echo get_field('description_3'); ?></p></div>
+								<div class="work-examples-text col-11"><p class="js-show-more" data-max-height="60"><strong><?php echo get_field('header_3'); ?> </strong><?php echo get_field('description_3'); ?></p></div>
 							</div>
-							<div class="col-md-12 col-lg-6 set row justify-content-center">
+
+							<div class="col-12 col-lg-6 set row">
 								<div class="work-examples work-examples-big col-12" id="bigColor" style="background-image: url(<?php echo get_field('image_4'); ?>);"></div>
-								<div class="work-examples-text col-11"><p><strong><?php echo get_field('header_4'); ?> </strong><?php echo get_field('description_4'); ?></p></div>
+								<div class="work-examples-text col-11"><p class="js-show-more" data-max-height="60"><strong><?php echo get_field('header_4'); ?> </strong><?php echo get_field('description_4'); ?></p></div>
 							</div>
 						</div>
-					
 					</div>
 					</div>
 				</div>
