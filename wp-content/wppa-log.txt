@@ -1,0 +1,9 @@
+{b}{span style="color:orange;" }Dbg{/span}{/b}: on:January 29, 2018 3:25 pm: odmen: $wppa_opt[wppa_maint_ignore_cron] is not a setting
+{b}url{/b}: /wp-admin/admin-ajax.php
+
+{b}{span style="color:orange;" }Dbg{/span}{/b}: on:January 29, 2018 3:25 pm: odmen: $wppa_opt[wppa_photo_shortcode_enabled] is not a setting
+{b}url{/b}: /wp-admin/admin-ajax.php
+
+{b}{span style="color:orange;" }Dbg{/span}{/b}: on:January 29, 2018 3:25 pm: odmen: $wppa_opt[wppa_grant_an_album] is not a setting
+{b}url{/b}: /wp-admin/admin-ajax.php
+

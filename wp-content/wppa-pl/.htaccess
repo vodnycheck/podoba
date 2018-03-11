@@ -1,0 +1,8 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /C:/OpenServer/domains/podoba/wp-content/wppa-pl
+RewriteRule ^Набор-№4/(.*) /C:/OpenServer/domains/podoba/wp-content/uploads/wppa-source/album-4/$1 [NC]
+RewriteRule ^Набор-№3/(.*) /C:/OpenServer/domains/podoba/wp-content/uploads/wppa-source/album-3/$1 [NC]
+RewriteRule ^Набор-№2/(.*) /C:/OpenServer/domains/podoba/wp-content/uploads/wppa-source/album-2/$1 [NC]
+RewriteRule ^Набор-№1/(.*) /C:/OpenServer/domains/podoba/wp-content/uploads/wppa-source/album-1/$1 [NC]
+</IfModule>
