@@ -68,6 +68,44 @@ body{
 	}
 }
 
+.thumbs {
+	position: fixed;
+	bottom: 10px;
+	left: 10px;
+	right: 10px;
+	text-align: center;
+	z-index: 99999;
+	opacity: .2;
+	transition: opacity .3s;
+
+	&:hover {
+		opacity: 1;
+	}
+}
+
+.thumbs__thumb {
+	display: inline-block;
+	width: 80px;
+	height: 60px;
+	overflow: hidden;
+	margin: -3px 3px 0;
+	transition: width .3s, height .3s, border .3s;
+
+	img {
+		max-width: 100%;
+		max-height: 100%;
+	}
+}
+
+.thumbs__thumb--active {
+	width: 84px;
+	height: 64px;
+
+	img {
+		border: 2px solid #fff;
+	}
+}
+
 .swiper-slide {
 	position: relative;
 	max-width: 298px;
@@ -91,7 +129,7 @@ body{
 
 .header-bg{
 	display: flex;
-	background-image: url(assets/images/headerBG.png);
+	background-image: url(assets/images/headerBG.jpg);
 	min-height: 100vh;
 	background-size: cover;
 	background-position: bottom center;
@@ -185,10 +223,9 @@ body{
 
 /*INFORMATION*/
 .info-bg{
-	background-image: url(assets/images/infoBG.png);
+	background-image: url(assets/images/infoBG.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
-	min-height: 50rem;
 }
 .info{
 	padding-top: 2rem;
@@ -240,6 +277,7 @@ div#bigYellow{
 	background-size: contain;
 	height: 18rem;
 	background-position: bottom center;
+	cursor: pointer;
 }
 .work-examples-big{
 	/*position: relative;*/
@@ -306,7 +344,7 @@ div#bigYellow{
 }
 
 .contacts-info{
-	background-image: url(assets/images/contactBG.png);
+	background-image: url(assets/images/contactBG.jpg);
 	background-size: cover;
 	
 	/*height: 30rem;*/

@@ -8,6 +8,7 @@ function buildAlbumsUI() {
 	$originalPhotos = $('.albums__list'),
 	$newAlbums = $('.js-our-works-wrap'),
 	$colorPicker = $('<ul class="color-picker"></ul>');
+	$thumbs = $('<ul class="thumbs"></ul>');
 
 	$originalAlbums.each(function(index){
 		albumInfo.name = $(this).find('.wppa-title a').text();
@@ -61,6 +62,7 @@ function buildAlbumsUI() {
 
 		(function(array){
 			$image.on('click', function() {
+				$thumbs.html('');
 				$colorPicker.html('');
 				$.fancybox.open($photos.find('a'));
 				var tags = array;
@@ -81,9 +83,10 @@ function buildAlbumsUI() {
 								colorCode = $(this).attr('data-color');
 
 								$photos.find('img').each(function(index, item){
-									if ($(item).attr('data-tags').replace(/c/i, '') === colorCode) {newImagesArray.push($(item).closest('a'));}
+									if ($(item).attr('data-tags').replace(/c/i, '') === colorCode) {newImagesArray.push($(item).closest('a').clone());}
 								});
 
+								galeryThumbs.build(newImagesArray);
 								$.fancybox.close( true );
 								$.fancybox.open( newImagesArray );
 
@@ -93,18 +96,59 @@ function buildAlbumsUI() {
 				}
 
 				$('body').append($colorPicker);
+				$('body').append($thumbs);
 			})
 		})(albumInfo.tags)
 	});
 
 	$(document).on('beforeClose.fb', function( e, instance, slide ) {
-		$colorPicker.fadeOut();
+		$colorPicker.hide();
+		galeryThumbs.hide();
 	});
 
 	$(document).on('beforeLoad.fb', function( e, instance, slide ) {
-		$colorPicker.fadeIn();
+		$colorPicker.show();
+		galeryThumbs.show();
 	});
+
+	var galeryThumbs = {
+		build: function(arrayOfThumbs){
+			//debugger;
+			$thumbs.html('');
+			arrayOfThumbs.forEach(function($item, index){
+				var $thumb = $('<li class="thumbs__thumb"></li>');
+				$thumb.append($item);
+				$thumbs.append($thumb);
+
+				$item.on('click', function(e){
+					e.preventDefault();
+
+					$('.thumbs__thumb--active').removeClass('thumbs__thumb--active');
+					$(this).closest('.thumbs__thumb').addClass('thumbs__thumb--active');
+
+					$.fancybox.close( true );
+					$.fancybox.open( arrayOfThumbs, {}, index );
+				});
+			});
+			$thumbs.find('.thumbs__thumb').eq(0).addClass('thumbs__thumb--active');
+
+			this.show();
+		},
+		show: function(){
+			$thumbs.fadeIn();
+		},
+		hide: function(){
+			$thumbs.fadeOut();
+		}
+	}
 }
+
+$(document).on('beforeShow.fb', function( e, instance, slide ) {
+	$('.thumbs__thumb--active').removeClass('thumbs__thumb--active');
+	$('.thumbs__thumb [href="' + slide.src + '"]').closest('.thumbs__thumb').addClass('thumbs__thumb--active');
+});
+
+
 
 var slideIndex = 0;
 
