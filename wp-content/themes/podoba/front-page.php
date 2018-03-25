@@ -72,20 +72,20 @@ get_header(); ?>
 						<div class="sideBar"></div>
 					</a>
 					<ul>
-						<li><a href="#section1">ГЛАВНАЯ</a></li>
+						<li><a href="#section1">MAIN</a></li>
 						<li>-</li>
-						<li><a href="#sector2">НАШИ РАБОТЫ</a></li>
+						<li><a href="#sector2">OUR WORKS</a></li>
 						<li>-</li>
-						<li><a href="#sector3">ГАЛЕРЕЯ</a></li>
+						<li><a href="#sector3">GALERY</a></li>
 						<li>-</li>
-						<li><a href="#sector4">КОНТАКТЫ</a></li>
+						<li><a href="#sector4">CONTACTS</a></li>
 					</ul>
 					<div class="logo"></div>
 				</div>
 			</div>	
 			<div class="tagline" id="scroll">
 				<div class="tag-text">
-					<h3>фигурки для системно-семейных расстановок</h3>
+					<h3>Family constellation sets</h3>
 				</div>
 				<a href="#section1"><div class="arrow-down"></div></a>
 			</div>

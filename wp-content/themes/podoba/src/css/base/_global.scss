@@ -55,16 +55,30 @@ body{
 
 .color-picker {
 	position: fixed;
-	top: 20px;
-	right: 20px;
+	padding: 10px 10px 10px;
+	top: 0;
+	right: 0;
+	border-radius: 0 0 0px 10px;
 	z-index: 99999;
+	background-color: rgba(0, 0, 0, .28);
+
+	&:empty {
+		padding: 0;
+	}
 
 	li {
-		width: 30px;
-		height: 30px;
-		margin-top: 10px;
-		border-radius: 20px;
 		cursor: pointer;
+		margin-top: 10px;
+		color: #fff;
+
+		span {
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+			border-radius: 20px;
+			vertical-align: middle;
+			margin: 0px 5px 2px;
+		}
 	}
 }
 
@@ -216,26 +230,14 @@ body{
 	background-repeat: no-repeat;
 	width: 6rem;
 	height: 41px;
-
 }
-
-
 
 /*INFORMATION*/
-.info-bg{
-	background-image: url(assets/images/infoBG.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
-}
 .info{
 	padding-top: 2rem;
 }
 .info p{
-	color:  #ffffff;
-	font-size: 1rem;
-	font-weight: 400;
 	line-height: 1.5;
-	text-align: justify;
 }
 
 
@@ -251,7 +253,6 @@ body{
 }
 #ourWorks{
 	position: relative;
-	top: -22rem;
 	height: 34rem;
 }
 div#bigYellow{
@@ -419,13 +420,11 @@ div#bigYellow{
 	margin-bottom: 2rem;
 }
 .our-info{
-	font-size: 1rem;
-	color: #ffffff;
-	font-size: 0.998rem;
+	font-size: 12px;
+	color: #828282;
 	font-weight: 400;
 	line-height: 1.879;
 	text-align: left;
-	transform: scaleX(1.0037);
 }
 .our-info a{
 	margin-left: 2rem;
@@ -494,11 +493,7 @@ div#bigYellow{
 		background-position: center;
 	}
 	#ourWorks{
-		top: -18rem;
 		height: 82rem;
-	}
-	#ourWorks > div > div > div > div > div{
-		margin-bottom: 1rem;
 	}
 	.my-slides > a > img{
 		width: 175px;
@@ -537,7 +532,6 @@ div#bigYellow{
 		height: 65rem;
 	}
 	#ourWorks{
-		top: -22rem;
 		height: 82rem;
 	}
 }
@@ -568,19 +562,13 @@ div#bigYellow{
 		height: 95rem;
 	}
 	#ourWorks{
-		top: -33rem;
 		height: 63rem;
 	}
 	.my-slides > a > img{
 		width: 122px;
 		margin: 5px;
 	}
-	#ourWorks > div > div > div > div > div{
-		margin-bottom: -4rem;
-	}
-	#ourWorks > div > div > div > div > div:nth-child(1){
-		margin-top: -4rem;
-	}
+
 	.user-information{
 		flex-direction: column;
 		/*background-color: green;*/

@@ -69,13 +69,22 @@ function buildAlbumsUI() {
 
 				if (tags.length > 1) {
 					tags.forEach(function(item){
+						//debugger;
 						var $colorPickerElement,
-							colorCode = item.replace(/c/i, '');
+							colorCode,
+							colorName;
 
-						if (item.search(/^c([a-f,0-9]{3}|[a-f,0-9]{6})$/i) !== -1) {
-							$colorPickerElement = $('<li style="background-color: #' + colorCode + '" data-color="' + colorCode + '"></li>');
+						if (item.search(/^([a-f,0-9]{6}|[a-f,0-9]{3})\s/i) !== -1) {
+							colorName = item.replace(/^([a-f,0-9]{6}|[a-f,0-9]{3})\s/i, '');
 						} else {
-							$colorPickerElement = $('<li class="non-color" data-color="' + colorCode + '"></li>');
+							colorName = '#' + item;
+						}
+
+						if (item.search(/^([a-f,0-9]{6}|[a-f,0-9]{3})/i) !== -1) {
+							colorCode = item.match(/([a-f,0-9]{6}|[a-f,0-9]{3})/i)[0];
+							$colorPickerElement = $('<li data-color="' + item + '"><span style="background-color: #' + colorCode + '"></span>' + colorName + '</li>');
+						} else {
+							$colorPickerElement = $('<li data-color="' + item + '"><span class="non-color"></span>' + colorName + '</li>');
 						}
 
 						$colorPickerElement.on('click', function(){
@@ -83,7 +92,7 @@ function buildAlbumsUI() {
 								colorCode = $(this).attr('data-color');
 
 								$photos.find('img').each(function(index, item){
-									if ($(item).attr('data-tags').replace(/c/i, '') === colorCode) {newImagesArray.push($(item).closest('a').clone());}
+									if ($(item).attr('data-tags') === colorCode) {newImagesArray.push($(item).closest('a').clone());}
 								});
 
 								galeryThumbs.build(newImagesArray);
