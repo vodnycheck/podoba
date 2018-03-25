@@ -246,14 +246,19 @@ body{
 	font-size: 1.875rem;
 	font-weight: 700;
 	line-height: 1.6;
-	color: #ffffff;
+	text-transform: uppercase;
 }
 .set {
 	margin-bottom: 20px;
+	cursor: pointer;
+
+	img {
+		width: 100%;
+		border: 14px solid #fff;
+	}
 }
 #ourWorks{
 	position: relative;
-	height: 34rem;
 }
 div#bigYellow{
 	background-image: url(assets/images/bigyellow.png);
@@ -492,9 +497,6 @@ div#bigYellow{
 	.logo{
 		background-position: center;
 	}
-	#ourWorks{
-		height: 82rem;
-	}
 	.my-slides > a > img{
 		width: 175px;
 		margin: 5px;
@@ -531,9 +533,6 @@ div#bigYellow{
 	.info{
 		height: 65rem;
 	}
-	#ourWorks{
-		height: 82rem;
-	}
 }
 @media (max-width: 543px){
 	body{
@@ -560,9 +559,6 @@ div#bigYellow{
 	}
 	.info{
 		height: 95rem;
-	}
-	#ourWorks{
-		height: 63rem;
 	}
 	.my-slides > a > img{
 		width: 122px;

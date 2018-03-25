@@ -18,9 +18,9 @@ function buildAlbumsUI() {
 		albumInfo.images = $originalPhotos.find('.wppa-container').eq(albumInfo.number).find('img');
 		albumInfo.tags = [];
 
-		var wrap = $('<div class="col-12 col-lg-6 set row"></div>');
-		var $image = $('<div class="work-examples col-12" style="background-image: url(' + albumInfo.coverImageUrl + ');"></div>');
-		var $description = $('<div class="work-examples-text col-11"><p class="js-show-more" data-max-height="60"><strong>' + albumInfo.name + ' </strong>' + albumInfo.description + '</p></div>');
+		var wrap = $('<div class="set col-12 col-lg-6"></div>');
+		var $image = $('<img src="' + albumInfo.coverImageUrl + '"/>');
+		var $description = $('<div class="work-examples-text"><p class="js-show-more" data-max-height="60"><strong>' + albumInfo.name + ' </strong>' + albumInfo.description + '</p></div>');
 		var $photos = getImagesArray(albumInfo.images, albumInfo.tags);
 
 		function getImagesArray(images, tags){
@@ -36,9 +36,9 @@ function buildAlbumsUI() {
 					$newImg = $('<img/>');
 
 				$newHref.attr('href', photoOriginSrc);
+				$newHref.attr('data-caption', photoDesc);
 				$newImg.attr('src', photoThumbSrc);
 				$newImg.attr('data-tags', photoTags);
-				$newImg.attr('data-desc', photoDesc);
 
 				$newListItem.append($newHref);
 				$newHref.append($newImg);

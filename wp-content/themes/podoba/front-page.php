@@ -114,7 +114,7 @@ get_header(); ?>
 
 			<section class="our-works" id="ourWorks">
 				<div class="sets container text-center">
-					<h2 id="sector2">НАШИ РАБОТЫ</h2>
+					<h2 id="sector2">Our Works</h2>
 					<div class="row">
 					<div class="col-12">
 						<div class="row js-our-works-wrap">
