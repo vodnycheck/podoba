@@ -73,7 +73,7 @@
 			.pipe(sass(options.sass).on('error', sass.logError))
 			.pipe(autoprefixer(options.autoprefixer))
 			.pipe(concat('style.css'))
-			.pipe(gcmq())/*turn off if sourcemaps needed*/
+			//.pipe(gcmq())/*turn off if sourcemaps needed*/
 			.pipe(nano(options.nano))
 			.pipe(sourcemaps.write('/'))
 			.pipe(gulp.dest(paths.build.css));

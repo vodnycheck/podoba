@@ -51,43 +51,36 @@ get_header(); ?>
 
 		<nav class="sidenav" data-sidenav data-sidenav-toggle="#sidenav-toggle" id="toggle-menu">
 			<div class="sidenav-header">
-				<a href="#section1">ГЛАВНАЯ</a>
+				<a class="js-action--smooth-scroll" href="#section1">HOME</a>
 			</div>
 			<div class="sidenav-header">
-				<a href="#sector2">НАШИ РАБОТЫ</a>
+				<a class="js-action--smooth-scroll" href="#sector2">OUR WORKS</a>
 			</div>
 			<div class="sidenav-header">
-				<a href="#sector3">ГАЛЕРЕЯ</a>
-			</div>
-			<div class="sidenav-header">
-				<a href="#sector4">КОНТАКТЫ</a>
+				<a class="js-action--smooth-scroll" href="#sector4">CONTACTS</a>
 			</div>
 		</nav>
 
 		<header class="header-bg w-100 text-center d-flex flex-column
 		justify-content-between">
-			<div class="container navigation d-flex flex-column">
-				<div class="nav-menu d-flex flex-column" id="scroll-menu">
+			<div class="container navigation d-flex">
+				<div class="nav-menu d-flex" id="scroll-menu">
 					<a href="javascript:;" class="toggle" id="sidenav-toggle">
 						<div class="sideBar"></div>
 					</a>
 					<ul>
-						<li><a href="#section1">MAIN</a></li>
-						<li>-</li>
-						<li><a href="#sector2">OUR WORKS</a></li>
-						<li>-</li>
-						<li><a href="#sector3">GALERY</a></li>
-						<li>-</li>
-						<li><a href="#sector4">CONTACTS</a></li>
+						<li><a class="js-action--smooth-scroll" href="#section1">HOME</a></li>
+						<li><a class="js-action--smooth-scroll" href="#sector2">OUR WORKS</a></li>
+						<li><a class="js-action--smooth-scroll" href="#sector4">CONTACTS</a></li>
 					</ul>
 					<div class="logo"></div>
 				</div>
-			</div>	
+			</div>
 			<div class="tagline" id="scroll">
 				<div class="tag-text">
 					<h3>Family constellation sets</h3>
 				</div>
-				<a href="#section1"><div class="arrow-down"></div></a>
+				<a class="js-action--smooth-scroll" href="#section1"><div class="arrow-down"></div></a>
 			</div>
 		</header>
 		<main class="main text-center">
@@ -129,19 +122,21 @@ get_header(); ?>
 				<div class="container">
 					<div class="row justify-content-sm-center justify-content-md-center justify-content-lg-around justify-content-xl-around">
 						<div class="contacts-col contact-us col-12 col-lg-7">
-							<h3 id="sector4">СВЯЗАТЬСЯ С НАМИ</h3>
+							<h3 id="sector4">Send message</h3>
 							<div class="text-left">
 								<?php echo do_shortcode( '[contact-form-7 id="71" title="Contact"]' ); ?>
 							</div>
 						</div>
-						<div class="contacts-col our-contacts col-12 col-lg-5">
-							<h3>КОНТАКТЫ</h3>
-								<div class="our-mail our-info">
-									<p>email: <a href="mailto:<?php echo get_field('email'); ?>"><?php echo get_field('email'); ?></a></p>
-								</div>
-								<div class="our-numbers our-info">
-									<p>тел. <a href="tel:<?php echo get_field('tel_1'); ?>"><?php echo get_field('tel_1'); ?></a> <?php echo get_field('name_1'); ?></p>
-									<p>тел. <a href="tel:<?php echo get_field('tel_2'); ?>"><?php echo get_field('tel_2'); ?></a> <?php echo get_field('name_2'); ?></p>
+						<div class="contacts-col col-12 col-lg-5">
+								<div class="our-contacts">
+									<h3>Contacts</h3>
+									<div class="our-mail our-info">
+										<p><span class="our-mail__type">email: </span><a href="mailto:<?php echo get_field('email'); ?>"><?php echo get_field('email'); ?></a></p>
+									</div>
+									<div class="our-numbers our-info">
+										<p><span class="our-mail__type">tel: </span><a href="tel:<?php echo get_field('tel_1'); ?>"><?php echo get_field('tel_1'); ?></a> <?php echo get_field('name_1'); ?></p>
+										<p><span class="our-mail__type">tel: </span><a href="tel:<?php echo get_field('tel_2'); ?>"><?php echo get_field('tel_2'); ?></a> <?php echo get_field('name_2'); ?></p>
+									</div>
 								</div>
 							<div class="social-networks row justify-content-around">
 								<div id="facebook">
@@ -164,13 +159,9 @@ get_header(); ?>
 		</main>
 		<footer class="footer">
 					<ul id="bottom-menu">
-						<li><a href="#section1">ГЛАВНАЯ</a></li>
-						<li class="dash">-</li>
-						<li><a href="#sector2">НАШИ РАБОТЫ</a></li>
-						<li class="dash">-</li>
-						<li><a href="#sector3">ГАЛЕРЕЯ</a></li>
-						<li class="dash">-</li>
-						<li><a href="#sector4">КОНТАКТЫ</a></li>
+						<li><a class="js-action--smooth-scroll" href="#section1">HOME</a></li>
+						<li><a class="js-action--smooth-scroll" href="#sector2">OUR WORKS</a></li>
+						<li><a class="js-action--smooth-scroll" href="#sector4">CONTACTS</a></li>
 					</ul>
 		</footer>
 	</main><!-- #main -->

@@ -15489,6 +15489,34 @@ if(x.hashnav.initialized&&x.params.hashnav)if(x.params.replaceState&&window.hist
 //# sourceMappingURL=maps/swiper.jquery.min.js.map
 
 'use strict';
+$(function() {
+	$('a.js-action--smooth-scroll[href*="#"]').click(function (event) {//specify the class-name of links
+		if (
+			location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+			&&
+			location.hostname == this.hostname
+		) {
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+			if (target.length) {
+				event.preventDefault();
+				$('html, body').animate({
+					scrollTop: target.offset().top
+				}, 1000, function () {
+					var $target = $(target);
+					//$target.focus();
+					if ($target.is(":focus")) {
+						return false;
+					} else {
+						$target.attr('tabindex', '-1');
+						//$target.focus();
+					}
+					;
+				});
+			}
+		}
+	});
+});
 
 //albums
 buildAlbumsUI();
@@ -15508,9 +15536,9 @@ function buildAlbumsUI() {
 		albumInfo.images = $originalPhotos.find('.wppa-container').eq(albumInfo.number).find('img');
 		albumInfo.tags = [];
 
-		var wrap = $('<div class="set col-12 col-lg-6"></div>');
+		var wrap = $('<div class="set col-12 col-sm-6"></div>');
 		var $image = $('<img src="' + albumInfo.coverImageUrl + '"/>');
-		var $description = $('<div class="work-examples-text"><p class="js-show-more" data-max-height="60"><strong>' + albumInfo.name + ' </strong>' + albumInfo.description + '</p></div>');
+		var $description = $('<div class="work-examples-text"><p class="js-show-more" data-max-height="66"><strong>' + albumInfo.name + '. </strong>' + albumInfo.description + '</p></div>');
 		var $photos = getImagesArray(albumInfo.images, albumInfo.tags);
 
 		function getImagesArray(images, tags){
@@ -15681,9 +15709,9 @@ function counter(i){
      //$('body').append(`<style></style>`);
      $('.js-show-more').each(function(){
          var $mainBlock = $(this);
-         var maxHeight = $mainBlock.attr('data-max-height');
+         var maxHeight = parseInt($mainBlock.attr('data-max-height'));
          var initialTextHeight = 0;
-         var $readMore = $('<a class="js-read-more" href="#">читать далее</a>');
+         var $readMore = $('<a class="js-read-more" href="#">read more >></a>');
          //var $readLess = $('<a class="js-read-less" href="#">скрыть</a>');
          var $overlapBlock = $('<div class="limit-text"></div>');
          var text = $mainBlock.html();
@@ -15694,13 +15722,17 @@ function counter(i){
          //$overlapBlock.append($readLess);
          initialTextHeight = $overlapBlock.outerHeight();
 
-         $readMore.on('mouseover', expand);
-         //$readLess.on('click', shrink);
-         $mainBlock.on('mouseleave', shrink);
+         if (initialTextHeight >= maxHeight) {
+             $readMore.on('mouseover', expand);
+             //$readLess.on('click', shrink);
+             $mainBlock.on('mouseleave', shrink);
+         } else {
+             $readMore.hide();
+         }
 
          function expand(e) {
              e.preventDefault();
-             //$readMore.hide();
+             $readMore.hide();
              //$readLess.show();
              $overlapBlock.css('max-height', 250);
              $mainBlock.closest('.set').css({'z-index': 1, 'position': 'relative'});
@@ -15708,7 +15740,7 @@ function counter(i){
          function shrink(e) {
              e.preventDefault();
              //$readLess.hide();
-             $readMore.show();
+             $readMore.fadeIn(1000);
              $overlapBlock.css('max-height', '');
              setTimeout(function(){
                  $mainBlock.closest('.set').css({'z-index': '', 'position': ''});
