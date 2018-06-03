@@ -48,42 +48,20 @@ get_header(); ?>
 
 	endif; // The if ( 0 !== twentyseventeen_panel_count() ) ends here. ?>
 
-
-		<nav class="sidenav" data-sidenav data-sidenav-toggle="#sidenav-toggle" id="toggle-menu">
-			<div class="sidenav-header">
-				<a class="js-action--smooth-scroll" href="#section1">HOME</a>
-			</div>
-			<div class="sidenav-header">
-				<a class="js-action--smooth-scroll" href="#sector2">OUR WORKS</a>
-			</div>
-			<div class="sidenav-header">
-				<a class="js-action--smooth-scroll" href="#sector4">CONTACTS</a>
-			</div>
-		</nav>
-
-		<header class="header-bg w-100 text-center d-flex flex-column
+		<header class="header-bg w-100 d-flex flex-column
 		justify-content-between">
 			<div class="container navigation d-flex">
 				<div class="nav-menu d-flex" id="scroll-menu">
-					<a href="javascript:;" class="toggle" id="sidenav-toggle">
-						<div class="sideBar"></div>
-					</a>
-					<ul>
-						<li><a class="js-action--smooth-scroll" href="#section1">HOME</a></li>
-						<li><a class="js-action--smooth-scroll" href="#sector2">OUR WORKS</a></li>
-						<li><a class="js-action--smooth-scroll" href="#sector4">CONTACTS</a></li>
-					</ul>
 					<div class="logo"></div>
 				</div>
 			</div>
-			<div class="tagline" id="scroll">
+			<div class="container tagline" id="scroll">
 				<div class="tag-text">
 					<h3>Family constellation sets</h3>
 				</div>
-				<a class="js-action--smooth-scroll" href="#section1"><div class="arrow-down"></div></a>
 			</div>
 		</header>
-		<main class="main text-center">
+		<main class="main">
 			<section class="info-bg our-info" id="ourInfo">
 				<div class="container container-info">
 					<div class="row justify-content-center">
@@ -106,8 +84,8 @@ get_header(); ?>
 			</div>
 
 			<section class="our-works" id="ourWorks">
-				<div class="sets container text-center">
-					<h2 id="sector2">Our Works</h2>
+				<div class="sets container">
+					<h2 id="sector2" class="header-h2">Our Works</h2>
 					<div class="row">
 					<div class="col-12">
 						<div class="row js-our-works-wrap">
@@ -118,7 +96,15 @@ get_header(); ?>
 				</div>
 			</section>
 
-			<section class="contacts-info" id="contactsInfo">
+			<div class="container tagline" id="scroll">
+				<div class="tag-text">
+					<h2 class="header-h2">
+					Contact us<span class="our-mail__type">email: <a href="mailto:<?php echo get_field('email'); ?>"><?php echo get_field('email'); ?></a></span>
+					</h2>
+				</div>
+			</div>
+
+			<!-- <section class="contacts-info" id="contactsInfo">
 				<div class="container">
 					<div class="row justify-content-sm-center justify-content-md-center justify-content-lg-around justify-content-xl-around">
 						<div class="contacts-col contact-us col-12 col-lg-7">
@@ -155,15 +141,8 @@ get_header(); ?>
 						</div>
 					</div>
 				</div>
-			</section>
+			</section> -->
 		</main>
-		<footer class="footer">
-					<ul id="bottom-menu">
-						<li><a class="js-action--smooth-scroll" href="#section1">HOME</a></li>
-						<li><a class="js-action--smooth-scroll" href="#sector2">OUR WORKS</a></li>
-						<li><a class="js-action--smooth-scroll" href="#sector4">CONTACTS</a></li>
-					</ul>
-		</footer>
 	</main><!-- #main -->
 </div><!-- #primary -->
 

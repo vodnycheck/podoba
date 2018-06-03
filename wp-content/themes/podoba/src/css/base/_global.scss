@@ -1,11 +1,14 @@
 *{
 	box-sizing: border-box;
-	font-family: "MyriadProRegular";
-	/*overflow-x: hidden;*/
 }
 body{
 	overflow-x: hidden;
 	background-color: #eaeded !important;
+	font-family: "MyriadProRegular";
+}
+
+#colophon {
+	display: none;
 }
 
 @mixin placeholder {
@@ -39,6 +42,19 @@ body{
 	font-style: normal;
 	font-weight: normal;
 }
+
+@font-face {
+  font-family: 'MyriadProRegular';
+  src: url('assets/fonts/MyriadProBold/MyriadPro-Bold.eot');
+  src: url('assets/fonts/MyriadProBold/MyriadPro-Bold.woff2') format('woff2'),
+       url('assets/fonts/MyriadProBold/MyriadPro-Bold.woff') format('woff'),
+       url('assets/fonts/MyriadProBold/MyriadPro-Bold.ttf') format('truetype'),
+       url('assets/fonts/MyriadProBold/MyriadPro-Bold.svg#MyriadPro-Bold') format('svg'),
+       url('assets/fonts/MyriadProBold/MyriadPro-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
 @font-face {
 	font-family: "ArialRegular";
 	src: url("assets/fonts/ArialRegular/ArialRegular.eot");
@@ -146,15 +162,15 @@ body{
 }
 
 /*HEADER*/
-#toggle-menu > div a{
+#toggle-menu > div a {
 	color: #fff;
 	text-decoration: none;
 }
 
-.header-bg{
+.header-bg {
 	display: flex;
 	background-image: url(assets/images/headerBG.jpg);
-	min-height: 100vh;
+	min-height: 90vh;
 	background-size: cover;
 	background-position: bottom center;
 }
@@ -173,7 +189,7 @@ body{
 	background-color: #eaeded;
 	z-index: 1;
 	transition: max-height .3s;
-	text-indent: 14px;
+	white-space: pre-line;
 }
 
 .js-read-more {
@@ -235,9 +251,7 @@ body{
 
 
 .tagline {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+
 }
 
 .logo {
@@ -251,7 +265,7 @@ body{
 	@media (min-width: 576px) {
 		background-position: center;
 		margin-top: 60px;
-		height: 150px;
+		height: 115px;
 	}
 
 	@media (min-width: 768px) {
@@ -272,6 +286,7 @@ body{
 	font-weight: 100;
 	letter-spacing: .3px;
 	color: #60606e;
+	text-transform: uppercase;
 }
 .arrow-down{
 	margin-top: 24px;
@@ -286,30 +301,30 @@ body{
 
 /*INFORMATION*/
 .info {
-	padding-top: 40px;
+	padding-top: 25px;
 }
 
 .info p {
 	line-height: 1.5;
 	font-size: 16px;
 	letter-spacing: -.03px;
-	//text-indent: 14px;
+	text-indent: 14px;
+}
+
+.header-h2 {
+	margin-top: 40px;
+	margin-bottom: 10px;
+	font-size: 30px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	color: #4b4b4b;
+	text-transform: uppercase;
 }
 
 
 /*OUR WORKS*/
 .sets {
 	margin-bottom: 40px;
-
-	> h2 {
-		margin-top: 40px;
-		font-size: 30px;
-		font-weight: 100;
-		letter-spacing: 1px;
-		color: #4b4b4b;
-		text-transform: uppercase;
-		font-family: "ArialRegular";
-	}
 }
 .set {
 	margin-top: 30px;
@@ -318,7 +333,7 @@ body{
 
 	img {
 		width: 100%;
-		border: 14px solid #fff;
+		border: 9px solid #fff;
 	}
 }
 #ourWorks{
@@ -356,21 +371,24 @@ div#bigYellow{
 .work-examples__album {
 	display: none;
 }
-.work-examples-text strong {
-	color: #000;
-	font-weight: 700;
-	margin-right: 6px;
-}
 
-.work-examples-text p {
-	color:  #60606e;
-	font-size: 14px;
-	font-weight: 400;
-	line-height: 1.2;
-	margin-top: 13px;
-	text-align: justify;
-	transform: scaleY(1.0087);/* СЃРІРѕР№СЃС‚РІР° С€РёСЂРёРЅС‹ Рё РІС‹СЃРѕС‚С‹ Р±С‹Р»Рё РёСЃРєР»СЋС‡РµРЅС‹, РїРѕСЃРєРѕР»СЊРєСѓ Р±С‹Р»Рѕ РІС‹РїРѕР»РЅРµРЅРѕ С‚СЂР°РЅСЃС„РѕСЂРјРёСЂРѕРІР°РЅРёРµ */
-	transform: scale(1);
+.work-examples-text {
+
+	strong {
+		color: #000;
+		font-weight: bold;
+		margin-right: 6px;
+	}
+
+	p {
+		color:  #60606e;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 1.2;
+		margin-top: 13px;
+		text-align: justify;
+		white-space: pre-line;
+	}
 }
 
 /*GALLERY*/
@@ -378,7 +396,6 @@ div#bigYellow{
 	margin-bottom: 2rem;
 }
 .gallery-section h2{
-	font-family: "ArialRegular";
 	color:  #000000;
 	font-size: 1.864rem;
 	font-weight: 700;
@@ -414,9 +431,6 @@ div#bigYellow{
 
 .contacts-info {
 	padding: 0 0 30px;
-}
-.contacts-info * {
-	font-family: "ArialRegular";
 }
 .contacts-info h3 {
 	margin-bottom: 15px;
@@ -551,8 +565,16 @@ div.wpcf7 .ajax-loader {
 }
 
 .our-mail__type {
+	font-size: 16px;
 	min-width: 30px;
 	display: inline-block;
+	color: #8a8b94;
+	margin-left: 40px;
+	text-transform: none;
+
+	a {
+		color: inherit;
+	}
 }
 .social-networks{
 	> div {
