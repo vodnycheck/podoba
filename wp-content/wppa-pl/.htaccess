@@ -1,6 +1,7 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /C:/OpenServer/domains/podoba/wp-content/wppa-pl
+RewriteRule ^Set-№5/(.*) /C:/OpenServer/domains/podoba/wp-content/uploads/wppa-source/album-5/$1 [NC]
 RewriteRule ^SET-№4/(.*) /C:/OpenServer/domains/podoba/wp-content/uploads/wppa-source/album-4/$1 [NC]
 RewriteRule ^SET-№3/(.*) /C:/OpenServer/domains/podoba/wp-content/uploads/wppa-source/album-3/$1 [NC]
 RewriteRule ^SET-№2/(.*) /C:/OpenServer/domains/podoba/wp-content/uploads/wppa-source/album-2/$1 [NC]

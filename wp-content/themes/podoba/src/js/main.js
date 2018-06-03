@@ -95,7 +95,7 @@ function buildAlbumsUI() {
 				$.fancybox.open($photos.find('a'));
 				var tags = array;
 
-				if (tags.length > 1) {
+				if (tags.length > 0) {
 					tags.forEach(function(item){
 						//debugger;
 						var $colorPickerElement,
