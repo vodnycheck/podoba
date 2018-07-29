@@ -55,7 +55,7 @@ get_header(); ?>
 					<div class="logo"></div>
 				</div>
 			</div>
-			<div class="container tagline" id="scroll">
+			<div class="container">
 				<div class="tag-text">
 					<h3>Family constellation sets</h3>
 				</div>
@@ -96,11 +96,25 @@ get_header(); ?>
 				</div>
 			</section>
 
-			<div class="container tagline" id="scroll">
+			<div class="container tagline">
 				<div class="tag-text">
 					<h2 class="header-h2">
 					Contact us<span class="our-mail__type">email: <a href="mailto:<?php echo get_field('email'); ?>"><?php echo get_field('email'); ?></a></span>
 					</h2>
+				</div>
+				<div class="social-networks justify-content-around">
+					<div id="facebook">
+						<a href=""><img src="<?php echo $imageDir;?>socialNetworks/if_facebook_395306.png" alt=""></a>
+					</div>
+					<div id="pinterest">
+						<a href=""><img src="<?php echo $imageDir;?>socialNetworks/if_pinterest_395377.png" alt=""></a>
+					</div>
+					<div id="instagram">
+						<a href=""><img src="<?php echo $imageDir;?>socialNetworks/if_instagram_395340.png" alt=""></a>
+					</div>
+					<div id="vk">
+						<a href=""><img src="<?php echo $imageDir;?>socialNetworks/if_vkontakte_vk_395425.png" alt=""></a>
+					</div>
 				</div>
 			</div>
 

@@ -65,6 +65,10 @@ body{
 	font-weight: normal;
 }
 
+.d-inline-flex {
+	display: inline-flex;
+}
+
 //Albums
 .albums__all {
 	display: none;
@@ -281,12 +285,15 @@ body{
 		margin-left: -80px;
 	}
 }
-.tag-text h3{
-	font-size: 24px;
-	font-weight: 100;
-	letter-spacing: .3px;
-	color: #60606e;
-	text-transform: uppercase;
+.tag-text {
+	display: inline-flex;
+	h3 {
+		font-size: 24px;
+		font-weight: 100;
+		letter-spacing: .3px;
+		color: #60606e;
+		text-transform: uppercase;
+	}
 }
 .arrow-down{
 	margin-top: 24px;
@@ -577,6 +584,9 @@ div.wpcf7 .ajax-loader {
 	}
 }
 .social-networks{
+	display: inline-flex;
+	float: right;
+
 	> div {
 		width: 32px;
 		margin: 0 10px;
@@ -587,6 +597,13 @@ div.wpcf7 .ajax-loader {
 	}
 }
 
+.tagline {
+	padding-bottom: 30px;
+
+	.header-h2 {
+		margin: 0;
+	}
+}
 /*FOOTER*/
 
 .footer {
