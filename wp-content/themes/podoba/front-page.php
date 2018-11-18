@@ -104,16 +104,16 @@ get_header(); ?>
 				</div>
 				<div class="social-networks justify-content-around">
 					<div id="facebook">
-						<a href=""><img src="<?php echo $imageDir;?>socialNetworks/if_facebook_395306.png" alt=""></a>
+						<a href="https://www.facebook.com/WePodoba"><img src="<?php echo $imageDir;?>socialNetworks/if_facebook_395306.png" alt=""></a>
 					</div>
 					<div id="pinterest">
-						<a href=""><img src="<?php echo $imageDir;?>socialNetworks/if_pinterest_395377.png" alt=""></a>
+						<a href="https://www.pinterest.ru/PODOBAshop/"><img src="<?php echo $imageDir;?>socialNetworks/if_pinterest_395377.png" alt=""></a>
 					</div>
 					<div id="instagram">
-						<a href=""><img src="<?php echo $imageDir;?>socialNetworks/if_instagram_395340.png" alt=""></a>
+						<a href="https://www.instagram.com/podobashop"><img src="<?php echo $imageDir;?>socialNetworks/if_instagram_395340.png" alt=""></a>
 					</div>
-					<div id="vk">
-						<a href=""><img src="<?php echo $imageDir;?>socialNetworks/if_vkontakte_vk_395425.png" alt=""></a>
+					<div id="etsy">
+						<a href="https://www.etsy.com/shop/PODOBAshop"><img src="<?php echo $imageDir;?>socialNetworks/etsy.png" alt=""></a>
 					</div>
 				</div>
 			</div>
