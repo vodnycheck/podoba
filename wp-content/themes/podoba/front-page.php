@@ -47,20 +47,26 @@ get_header(); ?>
 			}
 
 	endif; // The if ( 0 !== twentyseventeen_panel_count() ) ends here. ?>
+	<?php if ( has_post_thumbnail() ) :
+		$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'twentyseventeen-featured-image' );
 
-		<header class="header-bg w-100 d-flex flex-column
-		justify-content-between">
-			<div class="container navigation d-flex">
-				<div class="nav-menu d-flex" id="scroll-menu">
-					<div class="logo"></div>
-				</div>
+		// Calculate aspect ratio: h / w * 100%.
+		$ratio = $thumbnail[2] / $thumbnail[1] * 100;
+		?>
+	<?php endif; ?>
+	<header class="header-bg w-100 d-flex flex-column justify-content-between" style="background-image:url(<?php echo esc_url( $thumbnail[0] ); ?>)">
+		<div class="container navigation d-flex">
+			<div class="nav-menu d-flex" id="scroll-menu">
+				<div class="logo"></div>
 			</div>
-			<div class="container">
-				<div class="tag-text">
-					<h3>Family constellation sets</h3>
-				</div>
+		</div>
+		<div class="container">
+			<div class="tag-text">
+				<h3>Family constellation sets</h3>
 			</div>
-		</header>
+		</div>
+	</header>
+
 		<main class="main">
 			<section class="info-bg our-info" id="ourInfo">
 				<div class="container container-info">
