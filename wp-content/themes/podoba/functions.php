@@ -17,6 +17,21 @@ if ( version_compare( $GLOBALS['wp_version'], '4.7-alpha', '<' ) ) {
 	return;
 }
 
+function my_custom_js() {
+    echo '<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-129541363-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+
+  gtag("config", "UA-129541363-1");
+</script>';
+}
+
+// Add hook for front-end <head></head>
+add_action( 'wp_head', 'my_custom_js' );
+
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
