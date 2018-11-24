@@ -60,11 +60,6 @@ get_header(); ?>
 				<div class="logo"></div>
 			</div>
 		</div>
-		<div class="container">
-			<div class="tag-text">
-				<h3>therapeutic sculptures</h3>
-			</div>
-		</div>
 	</header>
 
 		<main class="main">
@@ -72,6 +67,9 @@ get_header(); ?>
 				<div class="container container-info">
 					<div class="row justify-content-center">
 						<div class="info col-12" id="section1">
+							<div class="tag-text">
+								<h3>therapeutic sculptures</h3>
+							</div>
 							<?php echo get_field('description'); ?>
 						</div>
 					</div>

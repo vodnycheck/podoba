@@ -174,6 +174,7 @@ body{
 }
 
 .header-bg {
+	position: relative;
 	display: flex;
 	background-image: url(assets/images/headerBG.jpg);
 	min-height: 90vh;
@@ -261,30 +262,20 @@ body{
 }
 
 .logo {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
 	margin-top: 8px;
 	background-image: url(assets/images/logo.svg);
 	background-repeat: no-repeat;
 	background-size: contain;
-	background-position: right;
+	background-position: center;
 	height: 65px;
 
 	@media (min-width: 576px) {
 		background-position: center;
 		margin-top: 60px;
 		height: 115px;
-	}
-
-	@media (min-width: 768px) {
-	}
-
-	@media (min-width: 992px) {
-		background-position: left;
-		margin-left: 10px;
-		margin-top: 20px;
-	}
-
-	@media (min-width: 1200px) {
-		margin-left: -80px;
 	}
 }
 .tag-text {
