@@ -62,7 +62,7 @@ get_header(); ?>
 		</div>
 		<div class="container">
 			<div class="tag-text">
-				<h3>Family constellation sets</h3>
+				<h3>therapeutic sculptures</h3>
 			</div>
 		</div>
 	</header>
@@ -91,7 +91,6 @@ get_header(); ?>
 
 			<section class="our-works" id="ourWorks">
 				<div class="sets container">
-					<h2 id="sector2" class="header-h2">Our Works</h2>
 					<div class="row">
 					<div class="col-12">
 						<div class="row js-our-works-wrap">
