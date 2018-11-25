@@ -558,11 +558,12 @@ div.wpcf7 .ajax-loader {
 .our-info a {
 	margin-left: 10px;
 	margin-right: 10px;
-	color: #4f7965;
+	text-decoration: none;
+	color: inherit;
+	font-weight: 600;
 }
 .our-info a:hover{
-	text-decoration: none;
-	color: #fff000;
+	color: #424242;
 }
 .our-mail{
 	margin-bottom: 2rem;
