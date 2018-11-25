@@ -278,14 +278,19 @@ body{
 		height: 115px;
 	}
 }
+
+.dib {
+	display: inline-block;
+}
+
 .tag-text {
-	display: inline-flex;
 	h3 {
 		font-size: 24px;
 		font-weight: 100;
 		letter-spacing: .3px;
 		color: #60606e;
 		text-transform: uppercase;
+		text-align: center;
 	}
 }
 .arrow-down{

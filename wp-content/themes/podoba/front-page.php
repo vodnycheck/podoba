@@ -55,10 +55,8 @@ get_header(); ?>
 		?>
 	<?php endif; ?>
 	<header class="header-bg w-100 d-flex flex-column justify-content-between" style="background-image:url(<?php echo esc_url( $thumbnail[0] ); ?>)">
-		<div class="container navigation d-flex">
-			<div class="nav-menu d-flex" id="scroll-menu">
-				<div class="logo"></div>
-			</div>
+		<div class="nav-menu d-flex" id="scroll-menu">
+			<div class="logo"></div>
 		</div>
 	</header>
 
@@ -100,7 +98,7 @@ get_header(); ?>
 			</section>
 
 			<div class="container tagline">
-				<div class="tag-text">
+				<div class="dib">
 					<h2 class="header-h2">
 					Contact us<span class="our-mail__type">email: <a href="mailto:<?php echo get_field('email'); ?>"><?php echo get_field('email'); ?></a></span>
 					</h2>
